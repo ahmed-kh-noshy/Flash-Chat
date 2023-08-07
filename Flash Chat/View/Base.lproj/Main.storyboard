@@ -80,7 +80,7 @@
             </objects>
             <point key="canvasLocation" x="840.45801526717548" y="134.50704225352112"/>
         </scene>
-        <!--Register-->
+        <!--Register View Controller-->
         <scene sceneID="Xwg-YB-eak">
             <objects>
                 <viewController id="EZ7-0e-imm" customClass="RegisterViewController" customModule="Flash_Chat" customModuleProvider="target" sceneMemberID="viewController">
@@ -164,18 +164,18 @@
                             <constraint firstItem="dPL-tn-5Bj" firstAttribute="top" secondItem="3et-WQ-vje" secondAttribute="top" id="jtO-OZ-cGM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Register" id="Fvw-5v-lTq"/>
+                    <navigationItem key="navigationItem" id="Fvw-5v-lTq"/>
                     <connections>
                         <outlet property="emailTextfield" destination="MO6-cn-KqN" id="WXX-uv-cgh"/>
                         <outlet property="passwordTextfield" destination="43O-fy-7eE" id="aMT-Gf-Ghd"/>
-                        <segue destination="OvF-wn-jNQ" kind="show" identifier="registerToChat" id="NUG-nB-phF"/>
+                        <segue destination="OvF-wn-jNQ" kind="show" identifier="RegisterToChat" id="NUG-nB-phF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOk-Cu-Hu7" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1874.0458015267175" y="-295.07042253521126"/>
         </scene>
-        <!--Log In-->
+        <!-- -->
         <scene sceneID="DkN-Pa-z8Y">
             <objects>
                 <viewController id="MEZ-nX-scP" customClass="LoginViewController" customModule="Flash_Chat" sceneMemberID="viewController">
@@ -259,18 +259,18 @@
                             <constraint firstItem="DwW-xN-rtE" firstAttribute="trailing" secondItem="rVo-u9-AMI" secondAttribute="trailing" id="tPt-13-BD8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Log In" id="cNJ-1Y-bzH"/>
+                    <navigationItem key="navigationItem" title=" " id="cNJ-1Y-bzH"/>
                     <connections>
                         <outlet property="emailTextfield" destination="hi3-JZ-cUx" id="h7g-pj-z4i"/>
                         <outlet property="passwordTextfield" destination="JSK-di-Xy4" id="vg6-qj-VaA"/>
-                        <segue destination="OvF-wn-jNQ" kind="show" identifier="loginToChat" id="6IA-N3-5lf"/>
+                        <segue destination="OvF-wn-jNQ" kind="show" identifier="LoginToChat" id="6IA-N3-5lf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qH5-w2-f71" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1874.0458015267175" y="643.66197183098598"/>
         </scene>
-        <!--Chat-->
+        <!--Chat View Controller-->
         <scene sceneID="0ZF-Oj-or4">
             <objects>
                 <viewController id="OvF-wn-jNQ" customClass="ChatViewController" customModule="Flash_Chat" customModuleProvider="target" sceneMemberID="viewController">
@@ -278,19 +278,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e1M-oo-etu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e1M-oo-etu">
                                 <rect key="frame" x="0.0" y="103" width="393" height="655"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="5be-Jf-XfL">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5be-Jf-XfL" id="Xua-7D-lh6">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4oK-ps-ejP">
                                 <rect key="frame" x="0.0" y="758" width="393" height="60"/>
@@ -342,7 +332,13 @@
                             <constraint firstItem="4oK-ps-ejP" firstAttribute="leading" secondItem="gV5-7v-Maw" secondAttribute="leading" id="nPr-S5-UGL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Chat" id="R5G-FE-DH4"/>
+                    <navigationItem key="navigationItem" id="R5G-FE-DH4">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="iKi-dd-GXe">
+                            <connections>
+                                <action selector="logoutButton:" destination="OvF-wn-jNQ" id="TBn-nJ-hTz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="messageTextfield" destination="PUf-Lf-XkM" id="AcS-bK-wae"/>
                         <outlet property="tableView" destination="e1M-oo-etu" id="9mb-co-eQJ"/>
@@ -360,6 +356,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x7h-0d-ROo">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="BrandBlue"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
